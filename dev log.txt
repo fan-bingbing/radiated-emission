@@ -1,0 +1,29 @@
+Prescan:
+start frequency     [:SENS]:FREQ:STAR
+stop frequency      [:SENS]:FREQ:STOP
+detector (CISPR)    [:SENS]:DET EPOS
+RBW                 [:SENS]:BWID[:RES]   only step RBW can be selected when EMI peak used
+VBW                 [:SENS]:BWID:VID
+step size (Hz)=90KHz
+dwell time (ms)=0.1ms
+sweep time = 3000*0.1=300ms  [:SENS]:SWE:TIME
+attenuator          [:SENS]:POW:ATT
+Ref level           DISP:WIND:TRAC:Y:RLEV
+Pre-Amp             [:SENS]:POW:GAIN: OFF|ON
+measurement points=(300-30)M/90K=3000     [:SENS]:SWE:POIN
+AC/DC               INP:COUP AC|DC
+maxhold trace
+
+next -> Prescan setup SubVI  28Nov2018   done
+next -> Prescan run SubVI, Prescan trace SubVI 02Dec2018 done
+next -> create Prescan Status typedef done 06Dec2018
+next -> Prescan loadlimit SubVI done 08Dec2018
+next -> creat read&write .INI file SubVI done 12Dec2018
+next -> create marker SubVI done 15Dec2018 
+next -> creat table SubVI containing marker SubVI
+
+
+
+
+
+
